@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/anonimous/image/upload/v1663276871/train%20tickets/banderas/Dise%C3%B1o_sin_t%C3%ADtulo_yf497p.png"
+        type="image/x-icon">
+    <title>TrainTickets</title>
+</head>
+
+<body>
+    <nav class="header">
+        <h1 class="azul">
+            Train Tiquets
+        </h1>
+        <ul class="menu1">
+            <li class="menu"><a href="/registro">Registrarse</a></li>
+            <li class="menu"><a href="/inicio">Iniciar Sesion</a></li>
+        </ul>
+    </nav>
+    <main id="img">
+        <% if (typeof error !='undefined' ) { %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>
+                    <%= array %>
+                </strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <% } %>
+                <img id="horario" src="https://res.cloudinary.com/fashion-friendly/image/upload/v1661775421/Train%20Tickets/fondos/Dise%C3%B1o_sin_t%C3%ADtulo_trxu0m.png"
+                    alt="">>
+    </main>
+    <section class="horario">
+        <img src="img/horario.png" alt="">
+    </section>
+    <footer>
+        <p>
+            &copy;2022 Los Ilucionistas<br>tickettrain121@gmail.com
+        </p>
+    </footer>
+</body>
+
+</html>

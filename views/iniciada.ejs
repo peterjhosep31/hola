@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/iniciada.css">
+    <script src="js/tiquete.js"></script>
+    <title>TrainTickets</title>
+</head>
+
+<body>
+    <nav class="header">
+        <h1 class="azul">
+            Train Tiquets
+        </h1>
+        <ul class="menu1">
+        <li class="menu"><a href="/comprar">Tus compras</a></li>
+            <li class="menu"><a href="/logOut">cerrar Sesion</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="contenedor">
+        <div class="ticket">
+            <section class="bandera">
+                <p class="nombreCompañia">Safe and comfortable<br> travel</p>
+
+                <select onclick="destino(), sentidoViaje()" class="opcionDestino" id="opcionDestino">
+                    <option disabled selected>Escoja la bandera<br>de su destino</option>
+                    <option id="francia"
+                        value="https://res.cloudinary.com/anonimous/image/upload/v1661169566/train%20tickets/banderas/francia_ip2zud_e3dh7f.png">
+                        francia</option>
+                    <option class="nombreDestino" id="londes"
+                        value="https://res.cloudinary.com/anonimous/image/upload/v1661169562/train%20tickets/banderas/londres_vhblem_f5w1dc.png">
+                        londres</option>
+                </select>
+                <img class="imgBandera" id="imgBandera"
+                    src="https://www.semana.com/resizer/Lwb2_4rZb33eKrni66NNKUFmhPs=/1200x675/filters:format(jpg):quality(50)//cloudfront-us-east-1.images.arcpublishing.com/semana/BXALRY7GFBHSDIRR4YXPQ3EKDQ.jpg">
+                <p class="precio">100€</p>
+            </section>
+            <section class="containerInfo">
+                <div class="informacion">
+                    <div class="infogeneral">
+                        <p class="boleto">[-_-] Train Ticket [-_-]</p>
+                        <div id="sentidoViaje" class="destino"></div>
+                        <div class="punteado"></div>
+                        <p class="mensaje">Esperamos que tenga un buen viaje</p>
+                        <div class="fechaViaje destino" id="fechaViaje"></div>
+                    </div>
+                    <div class="hora">
+                        <div id="hora" class="destino"></div>
+                        <img id="imgHorario"
+                            src="https://flornacional.top/wp-content/uploads/2021/01/Cattleya-trianae-flor-nacional-de-colombia-orquidea.png">
+                    </div>
+                </div>
+
+                <section class="footer">
+                    <div class="cajas">
+                        horario:
+                        <select onclick="horario()" class="opciones" id="zonaHoraria">
+                            <option disabled selected>escoja el horario deseado</option>
+                            <option
+                                value="https://res.cloudinary.com/anonimous/image/upload/v1661171511/train%20tickets/horario/descarga_sr7nti_n1vbo1.png">
+                                mañana</option>
+                            <option
+                                value="https://res.cloudinary.com/anonimous/image/upload/v1661172340/train%20tickets/horario/descarga_jn6fsz_zr89co.png">
+                                tarde</option>
+                            <option
+                                value="https://res.cloudinary.com/anonimous/image/upload/v1661169605/train%20tickets/horario/descarga_v6saew_gyxiju.png">
+                                noche</option>
+                        </select>
+                    </div>
+                    <div class="cajas">
+                        dia:
+                        <input onchange="fecha()" class="opcionesTime" id="fecha" type="date">
+                    </div>
+                </section>
+                <button onclick="dataTikect()" id="comprar" type="submit">
+                    <a href="/comprar">comprar</a>
+                </button>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>
+            &copy;2022 Los Ilucionistas<br>tickettrain121@gmail.com
+        </p>
+
+    </footer>
+</body>
+
+</html>
+Footer

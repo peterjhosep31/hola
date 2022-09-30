@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/confirmarQR.css" />
+    <link rel="stylesheet" href="css/butom.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    ></script>
+    <script defer src="js/qrCode.js"></script>
+    <title>TrainTickets</title>
+  </head>
+
+  <body>
+    <nav class="header">
+      <h1 class="azul">Train Tiquets</h1>
+      <ul class="menu1">
+        <li class="menu"><a href="/iniciada">Comprar tiquete</a></li>
+        <li class="menu"><a href="/logOut">cerrar Sesion</a></li>
+      </ul>
+    </nav>
+
+    <% if (typeof data !="undefined" ) { %>
+    <div id="codigo"><%= data.codigo %></div>
+    <div class="container">
+      <div id="contenedorQR" class="containerQR"></div>
+      <div>
+        <span id="codigo">codigo: <%= data.codigo %> </span>
+        <span>destino: <%= data.destino %> </span>
+        <span>fecha: <%= data.fecha %> </span>
+        <span>hora: <%= data.hora %> </span>
+      </div>
+      <a href="/cancelar" class="ayuda">
+        <span id="x1"></span>
+        <span id="x2"></span>
+        <span id="x3"></span>
+        <span id="x4"></span>
+        BORRAR TIKETE
+      </a>
+    </div>
+
+    <% } %>
+    <footer>
+      <p>&copy;2022 Los Ilucionistas<br />tickettrain121@gmail.com</p>
+    </footer>
+  </body>
+</html>

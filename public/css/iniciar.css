@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+
+body {
+    background-image: url('/public/img/logo.webp');
+    text-transform: capitalize;
+}
+
+html {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 20%, rgba(232, 170, 66, 1) 60%, rgba(2, 0, 36, 1) 83%);
+}
+
+.form-register {
+    width: 400px;
+    background-color: #24303c;
+    padding: 30px;
+    justify-content: center;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-size: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.izquierdo {
+    margin: 0 300 px;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 0;
+    /* max-width: 50%;
+    background-color: red; */
+
+}
+
+.form-register h4 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: #E8AA42;
+
+    font-size: 22px;
+    margin-bottom: 20px;
+
+}
+
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #E8AA42;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.form-register p {
+    font-family: 'Bungee', cursive;
+    height: 70px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 40px;
+}
+
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    color: #E8AA42;
+    text-decoration: underline;
+
+}
+
+.form-register .botons {
+    width: 100%;
+    background: #E8AA42;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 3px;
+
+}
+
+.columns {
+
+    display: flex;
+    flex-direction: row;
+
+    columns: 2;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1)20%, rgba(232, 170, 66, 1) 60%, rgba(2, 0, 36, 1)83%);
+}

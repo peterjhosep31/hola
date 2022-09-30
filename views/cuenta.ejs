@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/anonimous/image/upload/v1663276871/train%20tickets/banderas/Dise%C3%B1o_sin_t%C3%ADtulo_yf497p.png"
+      type="image/x-icon"
+    />
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/cuenta.css" />
+  </head>
+
+  <body>
+    <nav class="header">
+      <h1 class="azul">Train Tiquets</h1>
+      <ul class="menu1">
+        <li class="menu"><a href="/principal">Cerrar sesion</a></li>
+      </ul>
+    </nav>
+
+    <div class="forcuenta">
+      <form action="/cuenta " method="post">
+        <section class="form-cuenta">
+          <p class="editar"><b>Editar Perfil</b></p>
+          <p class="nom">Nombre</p>
+          <input
+            class="controls"
+            type="text"
+            name="nombres"
+            id="nombres"
+            placeholder="ingrese su nombre"
+          />
+          <p class="ape">Apellido</p>
+          <input
+            class="controls"
+            type="text"
+            name="apellidos"
+            id="apellidos"
+            placeholder="ingrese su apellido"
+          />
+          <p class="corr">Correo</p>
+          <input
+            class="controls"
+            type="email"
+            name="correo"
+            id="correo"
+            placeholder="ingrese su correo"
+          />
+          <p class="iden">identificacion</p>
+          <input
+            class="controls"
+            type="text"
+            name="id"
+            id="identificacion"
+            placeholder="ingrese su identificacion"
+          />
+          <p class="fot">Foto</p>
+          <input
+            class="controlss"
+            type="file"
+            name="imagen"
+            id="direccion"
+            placeholder="Subir imagen"
+          />
+          <button class="botons" hrfe="/cuenta" type="submit">
+            Actualizar
+          </button>
+        </section>
+      </form>
+    </div>
+
+    <div class="caja2">
+      <% if (typeof rows !='undefined' ) { %>
+      <p class="editar"><b>Perfil</b></p>
+      <img
+        class="imagen1"
+        src="https://us.123rf.com/450wm/alekseyvanin/alekseyvanin1704/alekseyvanin170403663/76699411-vector-de-icono-de-usuario-ilustraci%C3%B3n-de-logotipo-s%C3%B3lido-de-perfil-pictograma-aislado-en-blanco.jpg"
+      />
+      <p class="nom">Nombre: <%= rows.nombre %></p>
+      <p class="ape">Apellido: <%= rows.apellido %></p>
+      <p class="corr">Correo: <%= rows.correo %></p>
+      <% } %>
+    </div>
+  </body>
+</html>

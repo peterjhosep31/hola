@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/fa98a09714.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/registro.css">
+    <script src="js/registro.js"></script>
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/anonimous/image/upload/v1663276871/train%20tickets/banderas/Dise%C3%B1o_sin_t%C3%ADtulo_yf497p.png"
+        type="image/x-icon">
+    <title>TrainTickets</title>
+</head>
+
+<body>
+    <div class="columns">
+        <h3>
+            <% if (typeof error !='undefined' ) { %>
+                <%= errorPrimaria %>
+                    <% } %>
+        </h3>
+        <div class="izquierdo">
+            <form action="/registro" method="post">
+                <section class="form-register">
+                    <h4>REGISTRO</h4>
+                    <input class="controls form-register" name="nombres" id="nombres"
+                        value="<% if (typeof valores !='undefined' ) { %><%= valores.nombres %><% } %>"
+                        placeholder="ingrese su nombre">
+                    <input class="controls form-register" name="apellidos" id="apellidos"
+                        value="<% if (typeof valores !='undefined' ) { %><%= valores.apellidos %><% } %>"
+                        placeholder="ingrese su apellido">
+                    <input class="controls form-register" name="correo" id="correo"
+                        value="<% if (typeof valores !='undefined' ) { %><%= valores.correo %><% } %>"
+                        placeholder="ingrese su correo">
+                    <input class="controls form-register" type="password" name="contraseña" id="contraseña"
+                        value="<% if (typeof valores !='undefined' ) { %><%= valores.contraseña %><% } %>"
+                        placeholder="ingrese su contraseña">
+                    <div>
+                        <div class="password" onclick="verPasswords()">
+                            <div>
+                                <i id="eyes" class="fa-solid fa-eye-slash"></i>
+                                <p>ver contraseña</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+                    <button class="botons" type="submit">Registrarse</button>
+
+                    <p><a href="/inicio">¿Ya tengo cuenta?</a></p>
+                </section>
+            </form>
+            <div class="error">
+                <% if (typeof validaciones !='undefined' ) { %>
+                    <% validaciones.forEach((validacion)=> { %>
+
+                        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="..." class="rounded me-2" alt="...">
+                                <strong class="me-auto">
+                                    <%= validacion.param %>
+                                </strong>
+                                <small class="text-muted">
+                                    <%= fechaActual %> >
+                                </small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                <%= validacion.msg %>
+                            </div>
+                        </div>
+
+                        <% }) %>
+                            <% } %>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

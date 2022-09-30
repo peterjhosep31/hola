@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-family: 'Mochiy Pop One', sans-serif;
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    background-color: #24282B;
+    align-items: center;
+    border-bottom: 10px solid #E8AA42;
+}
+
+.header ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.header li {
+
+    display: flex;
+    padding: 0 30px;
+    float: right;
+}
+
+.header a {
+    text-decoration: none;
+    list-style: none;
+    color: silver;
+}
+
+.header a:hover {
+    color: #E8AA42;
+}
+
+.azul {
+    color: #E8AA42;
+    font-size: 30px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    background: #24282b;
+    height: 75vh;
+}
+
+.ticket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #000 solid 2px;
+    box-shadow: 0 0 70px #e8aa42;
+    width: 75%;
+    height: 80%;
+}
+
+.bandera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+    width: 40%;
+}
+
+.nombreCompañia {
+    color: #e8aa42;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+.precio {
+    color: #9c6609;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.bandera img {
+    width: 90%;
+    height: 167px;
+}
+
+.bandera select {
+    width: 90%;
+
+}
+
+.containerInfo {
+    width: 60%;
+    text-align: center;
+    float: inherit;
+}
+
+.containerInfo img {
+    border-radius: 100%;
+    float: right;
+    width: 200px;
+    height: 111px;
+}
+
+.informacion {
+    display: flex;
+    justify-content: space-around;
+}
+
+.infogeneral {
+    width: 60%;
+}
+
+.hora {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.informacion img {
+    width: 80%;
+    box-shadow: 0 0 30px #000;
+}
+
+.boleto {
+    font-size: 30px;
+    color: #e8aa42;
+    font-weight: bold;
+}
+
+.destino {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mensaje {
+    color: #fff;
+}
+
+.opciones {
+    width: 80%;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.opcionDestino {
+    background: #4e4b4b;
+    font-size: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+}
+
+.cajas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: #000 solid 2px;
+    width: 48%;
+    color: #fff;
+    align-items: center;
+    margin: 2% 0;
+}
+
+.opciones {
+    display: flex;
+    background: rgba(70, 67, 67, 0.418);
+    color: white;
+    width: 69%;
+    padding: 1%;
+    text-transform: capitalize;
+    border-radius: 3px;
+    height: 100%;
+}
+
+.opcionesTime {
+    display: flex;
+    background: rgba(70, 67, 67, 0.418);
+    color: white;
+    width: 69%;
+    padding: 1%;
+    text-transform: capitalize;
+    border-radius: 3px;
+    height: 75%;
+}
+
+.opcionDestino {
+    text-transform: capitalize;
+    display: flex;
+    background: #4e4b4b;
+    color: silver;
+    padding: 1%;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+button {
+    margin: 3%;
+    padding: 1%;
+    background: #24282b;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: #9c6609;
+    font-weight: bold;
+}
+
+.button {
+    background: #24282b;
+    color: #9c6609;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.alert {
+    position: absolute;
+    background-position-x: center;
+    background-position-y: center;
+    font-size: 50px;
+    background: #eca52ae5;
+    color: red;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    border-top: 3px solid #E8AA42;
+    color: #E8AA42;
+    background-color: #24282B;
+    font-family: 'Mochiy Pop One', sans-serif;
+}

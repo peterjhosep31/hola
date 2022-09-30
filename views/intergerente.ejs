@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/intergerente.css">
+
+      <title>Inicio</title>
+</head>
+
+<body>
+      <nav class="header">
+            <h1 class="azul">
+                  Train Tiquets
+            </h1>
+            <ul class="menu1">
+                  <p class="menu2">MENU DE GERENTE</p>
+            </ul>
+      </nav>
+      <main id="img">
+            <img src="https://res.cloudinary.com/fashion-friendly/image/upload/v1661774795/Train%20Tickets/fondos/tren_tfpdwc.jpg"
+                  alt="" width="100%" height="800px">
+
+      </main>
+      <div class="editarti">
+            <form action="/acontecimientos" method="post">
+                  <section class="horario">
+                        <h1 class="azul">AVISAR ACONTECIMIENTOS</h1>
+                        <input class="controls" type="email" name="correo" id="correo"
+                              placeholder="ingrese el correo de la persona a la que le quiere notificar el acontecimiento">
+                        <input class="controls" type="text" name="mensaje" id="mensanje"
+                              placeholder="ingrese el mensaje que quiere notificar">
+                        <button class="botons" type="submit">Enviar</button>
+
+                  </section>
+            </form>
+      </div>
+      <footer>
+            <p>
+                  &copy;2022 Los Ilucionistas<br>tickettrain121@gmail.com
+            </p>
+      </footer>
+</body>
+<script src="/app.js">{
+            let n = parseInt(prompt("ingrese la cantidad de correos que desea enviar"));
+            for (let i = 0; i < n; i++) {
+
+                  db.get(
+                        'INSERT INTO acontecimientos (correo, mensaje) VALUES (?,?)',
+                        [correo, mensaje],
+                        function (error) {
+                              if (!error) {
+                                    console.log("Enviado correctamente");
+                                    const transporter = nodemailer.createTransport({
+                                          host: "smtp.gmail.com",
+                                          port: 587,
+                                          auth: {
+                                                user: "2022traintickets@gmail.com",
+                                                pass: "vflatihlfczlhjqw",
+                                          },
+                                    });
+                                    transporter
+                                          .sendMail({
+                                                from: "2022traintickets@gmail.com",
+                                                to: correo,
+                                                subject: "Acontecimientos sobre su viaje",
+                                                html: mensaje,
+                                          })
+                                          .then((res) => {
+                                                console.log(res);
+                                          })
+                                          .catch((err) => {
+                                                console.log(err);
+                                          });
+                                    return res.render("principal");
+                              }
+                        }
+                  );
+            }
+
+      }
+</script>
+
+</html>

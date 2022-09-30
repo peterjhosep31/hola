@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-family: 'Mochiy Pop One', sans-serif;
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    background-color: #24282B;
+    align-items: center;
+    border-bottom: 10px solid #E8AA42;
+}
+
+.header ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.header li {
+
+    display: flex;
+    padding: 0 30px;
+    float: right;
+}
+
+.header a {
+    text-decoration: none;
+    list-style: none;
+    color: silver;
+}
+
+.header a:hover {
+    color: #E8AA42;
+}
+
+.azul {
+    color: #E8AA42;
+    font-size: 30px;
+}
+
+main {
+    background: url();
+    border-bottom: 10px solid #E8AA42;
+}
+
+
+.forcuenta {
+    background: #24282B;
+    height: 500px;
+    width: 400px;
+    margin-left: 240px;
+    margin-top: 60px;
+}
+
+
+.editar {
+    color: #E8AA42;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 25px;
+    margin-left: 96px;
+    padding: 30px;
+}
+
+.nom {
+    color: rgb(255, 255, 255);
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.controls {
+    width: 300px;
+    height: 30px;
+    margin-left: 40px;
+}
+
+
+.ape {
+    color: rgb(255, 248, 248);
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.corr {
+    color: rgb(255, 255, 255);
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+
+
+
+.controlss {
+    width: 300px;
+    height: 50px;
+    margin-left: 40px;
+    cursor: pointer;
+
+}
+
+.botons {
+    width: 200px;
+    height: 30px;
+    margin-left: 90px;
+    background: #E8AA42;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+}
+
+
+.caja2 {
+    background-color: #24282B;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 132px;
+    left: 800px;
+
+
+}
+
+body {
+    height: 690px;
+}
+
+.imagen1 {
+    width: 200px;
+    height: 200px;
+    margin-left: 80px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    border-top: 3px solid #E8AA42;
+    color: #E8AA42;
+    background-color: #24282B;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
